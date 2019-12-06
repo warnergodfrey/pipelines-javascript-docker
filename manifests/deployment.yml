@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: warnergodfreypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: warnergodfreypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: warnergodfreypipelinesjavascriptdocker 
+          image: warnergodfreycontainerregistry.azurecr.io/warnergodfreypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
